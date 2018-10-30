@@ -514,8 +514,8 @@ input[type="text"]:focus {
   margin-right: 15px;
 }
 .target-form input[type="text"]:focus {
-  -webkit-box-shadow: 0 0 8px rgba(119, 208, 149, 0.55);
-          box-shadow: 0 0 8px rgba(119, 208, 149, 0.55);
+  -webkit-box-shadow: 0 0 8px rgba(119, 255, 99, 0.75);
+          box-shadow: 0 0 8px rgba(119, 255, 99, 0.75);
 }
 .target-form .btn {
   -webkit-box-shadow: 0 0 18px rgba(0, 0, 0, 0.15);
@@ -1144,8 +1144,8 @@ h3 {
     margin-bottom: 30px;
   }
   .target-form input[type="text"]:focus {
-    -webkit-box-shadow: 0 0 8px rgba(119, 208, 149, 0.55);
-            box-shadow: 0 0 8px rgba(119, 208, 149, 0.55);
+    -webkit-box-shadow: 0 0 8px rgba(119, 255, 99, 0.75);
+            box-shadow: 0 0 8px rgba(119, 255, 99, 0.75);
   }
   .target-form .btn {
     -webkit-box-shadow: 0 0 18px rgba(0, 0, 0, 0.15);
