@@ -1297,7 +1297,7 @@ h3 {
   .header__menu-mobile {
     display: inline-block;
     font-size: 36px;
-    color: rgba(45, 45, 45, 0.85);
+    color: rgba(255, 255, 255, 0.85);
     cursor: pointer;
   }
   .header__callback {
