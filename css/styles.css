@@ -1527,8 +1527,16 @@ h3 {
         -ms-flex-pack: center !important;
             justify-content: center !important;
   }
-  .questions__content {
+  .questions {
     padding: 0;
+  }
+  .questions .container {
+    width: 100vw;
+  }
+  .questions__content {
+    padding: 40px 0;
+    width: 100vw;
+    margin: 0;
   }
   .questions__content h3,
   .questions__content p {
