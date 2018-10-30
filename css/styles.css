@@ -435,7 +435,7 @@ a {
 }
 .btn {
   display: block;
-  color: #76d3fc;
+  color: #77d095;
   font-size: 16px;
   font-weight: 700;
   line-height: 30px;
@@ -501,7 +501,7 @@ input[type="text"] {
   padding: 11px 20px;
 }
 input[type="text"]:focus {
-  border: 2px solid #76d3fc;
+  border: 2px solid #77d095;
 }
 .target-form input[type="text"] {
   width: 290px;
@@ -514,8 +514,8 @@ input[type="text"]:focus {
   margin-right: 15px;
 }
 .target-form input[type="text"]:focus {
-  -webkit-box-shadow: 0 0 8px rgba(118, 211, 252, 0.55);
-          box-shadow: 0 0 8px rgba(118, 211, 252, 0.55);
+  -webkit-box-shadow: 0 0 8px rgba(119, 208, 149, 0.55);
+          box-shadow: 0 0 8px rgba(119, 208, 149, 0.55);
 }
 .target-form .btn {
   -webkit-box-shadow: 0 0 18px rgba(0, 0, 0, 0.15);
@@ -795,7 +795,7 @@ h3 {
   background: url(../image/arrow.png) no-repeat center center;
 }
 .clients .slider__nav:hover {
-  background: url(../image/arrow.png) no-repeat center center rgba(118, 211, 252, 0.1);
+  background: url(../image/arrow.png) no-repeat center center rgba(119, 208, 149, 0.1);
 }
 .clients .slider__nav--right {
   right: 0;
@@ -1144,8 +1144,8 @@ h3 {
     margin-bottom: 30px;
   }
   .target-form input[type="text"]:focus {
-    -webkit-box-shadow: 0 0 8px rgba(118, 211, 252, 0.55);
-            box-shadow: 0 0 8px rgba(118, 211, 252, 0.55);
+    -webkit-box-shadow: 0 0 8px rgba(119, 208, 149, 0.55);
+            box-shadow: 0 0 8px rgba(119, 208, 149, 0.55);
   }
   .target-form .btn {
     -webkit-box-shadow: 0 0 18px rgba(0, 0, 0, 0.15);
@@ -1331,7 +1331,7 @@ h3 {
   }
   .mobile-menu-wrap ul li a:hover {
     font-weight: 700;
-    background: rgba(118, 211, 252, 0.1);
+    background: rgba(119, 208, 149, 0.1);
   }
   .mobile-menu-close {
     position: absolute;
