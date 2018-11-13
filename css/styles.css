@@ -267,12 +267,17 @@ ul.peppermint-dots > li.peppermint-active-dot > span {
 }
 @font-face {
   font-family: 'Tahoma';
-  src: url(fonts/tahoma.ttf);
+  src: url(../fonts/tahoma.ttf);
 }
 @font-face {
   font-family: 'Proximanova';
-  src: url(fonts/proximanova-regular.ttf);
+  src: url(../fonts/proximanova-regular.ttf);
   font-weight: 400;
+}
+@font-face {
+  font-family: 'Proximanova';
+  src: url(../fonts/proximanova-bold.ttf);
+  font-weight: 700;
 }
 /* settings */
 /* row */
@@ -491,6 +496,7 @@ body {
 .btn--transparent {
   background-image: none;
   border-color: #14d193;
+  color: #303030;
 }
 .btn--transparent:hover {
   background-color: #14d193;
@@ -498,7 +504,7 @@ body {
   background-image: none;
 }
 .btn--icon {
-  padding: 11px 29px 11px 10px;
+  padding: 9px 24px 9px 10px;
   white-space: nowrap;
 }
 .btn--white {
@@ -968,22 +974,23 @@ h3 {
   background-color: #2d2d2d;
   color: #ffffff;
   letter-spacing: 0.36px;
-  padding: 50px 0;
+  padding: 67px 0 23px;
   line-height: 30px;
   font-size: 16px;
 }
 .footer .adress,
 .footer .phone {
-  padding-left: 71px;
+  padding-left: 67px;
   position: relative;
+  display: block;
 }
 .footer .adress {
-  margin-bottom: 20px;
+  margin-bottom: 17px;
 }
 .footer .phone {
   font-size: 18px;
-  font-weight: 700;
   line-height: 52px;
+  font-weight: 700;
 }
 .footer .phone a {
   color: #fff;
@@ -1012,7 +1019,7 @@ h3 {
 .footer__menu {
   width: 100%;
   text-transform: uppercase;
-  margin-bottom: 55px;
+  margin-bottom: 39px;
 }
 .footer__menu ul {
   display: -webkit-box;
@@ -1042,11 +1049,11 @@ h3 {
   color: #fff;
 }
 .footer__adress {
-  width: 40%;
+  width: 43%;
   line-height: 1.5;
 }
 .footer__socials {
-  width: 60%;
+  width: 57%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1059,10 +1066,11 @@ h3 {
           justify-content: center;
 }
 .footer__socials p {
-  padding-bottom: 24px;
+  padding-bottom: 18px;
+  padding-right: 136px;
   font-size: 16px;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.4;
 }
 .footer__socials a {
   display: inline-block;
@@ -1078,7 +1086,7 @@ h3 {
   opacity: 1;
 }
 .footer__socials a:not(:last-child) {
-  margin-right: 50px;
+  margin-right: 10px;
 }
 .fa-circle--footer {
   position: absolute;
@@ -1202,7 +1210,7 @@ h3 {
   font-size: 30px;
   font-weight: 700;
   letter-spacing: 0.6px;
-  margin-bottom: 15px;
+  margin-bottom: 14px;
 }
 .not-found__solution {
   color: #464646;
@@ -1432,9 +1440,6 @@ h3 {
   .footer .col--mid {
     width: inherit;
   }
-  .footer .col--mid .phone {
-    display: inline;
-  }
   .footer .col--mid .phone a {
     color: #ffffff;
   }
@@ -1443,13 +1448,16 @@ h3 {
   }
 }
 @media screen and (max-width: 959px) {
+  .header__menu {
+    width: auto;
+  }
   .header__menu ul {
     display: none;
   }
   .header__menu-mobile {
     display: inline-block;
     font-size: 36px;
-    color: rgba(255, 255, 255, 0.85);
+    color: rgba(119, 208, 149, 0.85);
     cursor: pointer;
   }
   .header__callback {
@@ -1578,6 +1586,44 @@ h3 {
   }
   .map {
     height: 400px;
+  }
+  .footer .col:first-child {
+    margin-bottom: 30px;
+  }
+  .footer .col--mid {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .footer__socials p {
+    padding-right: 0;
+  }
+  .footer__menu {
+    width: 45%;
+  }
+  .footer__menu ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer__adress {
+    width: 55%;
+  }
+  .footer__socials {
+    width: 100%;
+    text-align: center;
+  }
+  .not-found h1 {
+    font-size: 150px;
+  }
+  .not-found__text {
+    font-size: 25px;
+    text-align: center;
+  }
+  .not-found__solution {
+    font-size: 15px;
+    text-align: center;
   }
 }
 @media screen and (max-width: 719px) {
@@ -1716,6 +1762,21 @@ h3 {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+}
+@media screen and (max-width: 593px) {
+  .footer__menu {
+    width: 100%;
+    text-align: center;
+  }
+  .footer__adress {
+    width: 100%;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .footer .adress,
+  .footer .phone {
+    display: inline-block;
   }
 }
 /*# sourceMappingURL=styles.css.map */

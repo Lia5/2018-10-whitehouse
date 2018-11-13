@@ -5,13 +5,19 @@
 
 @font-face {
     font-family: 'Tahoma';
-    src: url(fonts/tahoma.ttf);
+    src: url(../fonts/tahoma.ttf);
 }
 @font-face {
     font-family: 'Proximanova';
-    src: url(fonts/proximanova-regular.ttf);
+    src: url(../fonts/proximanova-regular.ttf);
     font-weight: 400;
 }
+@font-face {
+    font-family: 'Proximanova';
+    src: url(../fonts/proximanova-bold.ttf);
+    font-weight: 700;
+}
+
 @blue-sky: #76d3fc;
 @green: #77d095;
 @green-2: rgb(119, 255, 99);
@@ -122,6 +128,7 @@ body {
     &--transparent {
         background-image: none;
         border-color: #14d193;
+        color: #303030;
         &:hover {
             background-color: #14d193;
             color: @white;
@@ -132,7 +139,7 @@ body {
     &--small {}
 
     &--icon {
-        padding: 11px 29px 11px 10px;
+        padding: 9px 24px 9px 10px;
         white-space: nowrap;
     }
 
@@ -667,20 +674,22 @@ h3 {
     background-color: @black;
     color: @white;
     letter-spacing: 0.36px;
-    padding: 50px 0;
+    padding: 67px 0 23px;
     line-height: 30px;
     font-size: 16px;
     .adress, .phone {
-        padding-left: 71px;
+        padding-left: 67px;
         position: relative;
+        display: block;
     }
     .adress {
-        margin-bottom: 20px;
+        margin-bottom: 17px;
     }
     .phone {
         font-size: 18px;
         font-weight: 700;
         line-height: 52px;
+        font-weight: 700;
         a {
             color: #fff;
         }
@@ -710,7 +719,7 @@ h3 {
         
         width: 100%;
         text-transform: uppercase;
-        margin-bottom: 55px;
+        margin-bottom: 39px;
         ul {
             display: flex;
             justify-content: space-between
@@ -736,20 +745,21 @@ h3 {
         }
     }
     &__adress {
-        width: 40%;
+        width: 43%;
         line-height: 1.5;
 
     }
     &__socials {
-        width: 60%;
+        width: 57%;
         .flex;
         flex-direction: column;
         justify-content: center;
         p {
-            padding-bottom: 24px;
+            padding-bottom: 18px;
+            padding-right: 136px;
             font-size: 16px;
             font-weight: 400;
-            line-height: 1.5;
+            line-height: 1.4;
         }
         a {
             display: inline-block;
@@ -765,7 +775,7 @@ h3 {
             }
 
             &:not(:last-child) {
-                margin-right: 50px;
+                margin-right: 10px;
             }
         }
     }
@@ -882,7 +892,7 @@ h3 {
         font-size: 30px;
         font-weight: 700;
         letter-spacing: 0.6px;
-        margin-bottom: 15px;
+        margin-bottom: 14px;
     }
     &__solution {
         color: #464646;
@@ -1196,8 +1206,7 @@ h3 {
                 width: inherit;
 
                 .phone {
-                    display: inline;
-
+                    // display: inline;
                     a {
                         color: @white;
                     }
@@ -1214,6 +1223,7 @@ h3 {
 @media screen and (max-width:959px) {
     .header {
         &__menu {
+            width: auto;
             ul {
                 display: none;
             }
@@ -1221,7 +1231,7 @@ h3 {
             &-mobile {
                 display: inline-block;
                 font-size: 36px;
-                color: fade(@white, 85%);
+                color: fade(@green, 85%);
                 cursor: pointer;
             }
         }
@@ -1367,6 +1377,43 @@ h3 {
 
     .map {
         height: 400px;
+    }
+    .footer {
+        .col:first-child {
+            margin-bottom: 30px;
+        }
+        .col--mid {
+            align-items: center;
+        }
+        &__socials p {
+            padding-right: 0;
+        }
+        &__menu {
+        width: 45%;
+            ul {
+                flex-direction: column;
+            }
+        }
+        &__adress {
+            width: 55%;
+        }
+        &__socials {
+            width: 100%;
+            text-align: center;
+        }
+    }
+    .not-found {
+        h1 {
+            font-size: 150px;
+        }
+        &__text {
+            font-size: 25px;
+            text-align: center;
+        }
+        &__solution {
+            font-size: 15px;
+            text-align: center;
+        }
     }
 }
 
@@ -1534,6 +1581,22 @@ h3 {
             flex-direction: column;
             align-items: center;
             justify-content: center;
+        }
+    }
+}
+@media screen and (max-width:593px) {
+    .footer {
+        &__menu {
+        width: 100%;
+        text-align: center;
+        }
+        &__adress {
+            width: 100%;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .adress, .phone {
+            display: inline-block;
         }
     }
 }
