@@ -269,6 +269,11 @@ ul.peppermint-dots > li.peppermint-active-dot > span {
   font-family: 'Tahoma';
   src: url(fonts/tahoma.ttf);
 }
+@font-face {
+  font-family: 'Proximanova';
+  src: url(fonts/proximanova-regular.ttf);
+  font-weight: 400;
+}
 /* settings */
 /* row */
 .row {
@@ -410,7 +415,7 @@ ul.peppermint-dots > li.peppermint-active-dot > span {
 }
 body,
 a {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Proximanova', 'Open Sans', sans-serif;
   color: #2d2d2d;
   font-weight: 400;
 }
