@@ -55,7 +55,12 @@ a {
     color: @black;
     font-weight: 400;
 }
-
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
 .container {
     width: 57.76vw;
     min-width: 280px;
@@ -75,11 +80,12 @@ a {
 .btn {
     display: block;
     color: @green;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 700;
     line-height: 30px;
     letter-spacing: 0.8px;
     border: 2px solid transparent;
+    
     .border-radius(28px);
     padding: 11px 35px;
     cursor: pointer;
@@ -111,17 +117,18 @@ a {
     }
     &--transparent {
         background-image: none;
+        border-color: #14d193;
         &:hover {
-            background-color: @white;
+            background-color: #14d193;
+            color: @white;
             background-image: none;
-            color: @green;
         }
     }
 
     &--small {}
 
     &--icon {
-        padding: 11px 29px;
+        padding: 11px 29px 11px 10px;
         white-space: nowrap;
     }
 
@@ -135,8 +142,19 @@ a {
             color: @black;
         }
     }
-}
+    &--uppercase {
+        text-transform: uppercase;
 
+    }
+}
+.fa-circle {
+    color: @white;
+    background-color: #14d193;
+    border-radius: 50%;
+    padding: 10px;
+    margin-right: 10px;
+
+}
 .flip {
     &--horizontal {
         transform: scale(-1, 1);
@@ -212,33 +230,53 @@ h3 {
 }
 
 .header {
-    padding: 53px 0;
-    background: rgb(77, 75, 75) url(../image/header-bg.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    &__logo {}
+    padding: 25px 0;
+    //background: rgb(77, 75, 75) url(../image/header-bg.png);
+    //background-repeat: no-repeat;
+    //background-size: cover;
+    background-color: #f0faf3;
+    &__logo {
+        max-width: 140px;
+        a {
+            display: block;
+        }
+        img {
+            max-width: 100%;
+        }
+    }
 
     &__menu {
+        width: 63%;
         ul {
             display: flex;
             justify-content: space-evenly;
             flex-wrap: wrap;
 
             li {
-                min-width: calc(32vw / 3);
+                // min-width: calc(32vw / 3);
                 .text-center;
 
                 a {
-                    color: #fff;
+                    color: #303030;
                     font-size: 16px;
                     line-height: 36px;
                     letter-spacing: 0.8px;
                     display: block;
                     padding: 10px;
                     .text-center;
-
+                    position: relative;
                     &:hover {
-                        font-weight: 700;
+                        color: #14d193;
+                        // font-weight: 700;
+                        &:after {
+                            content: "";
+                            position: absolute;
+                            left: 0;
+                            bottom: 8px;
+                            width: 100%;
+                            height: 2px;
+                            background-color: #14d193;
+                        }
                     }
                 }
             }
@@ -628,46 +666,96 @@ h3 {
     padding: 50px 0;
     line-height: 30px;
     font-size: 16px;
+    .adress, .phone {
+        padding-left: 71px;
+        position: relative;
+    }
+    .adress {
+        margin-bottom: 20px;
+    }
+    .phone {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 52px;
+        a {
+            color: #fff;
+        }
+    }
 
     .col {
-        opacity: 0.8;
-
         &--left {
-
+            width: 20%;
             a {
                 display: inline-block;
-                margin-bottom: 19px;
+            } 
+            img {
+                max-width: 135px;
             }
         }
 
         &--mid {
-            text-align: center;
-
-            .phone {
-                display: none;
-            }
-        }
-
-        &--right {
-            text-align: right;
-
-            .btn {
-                margin-top: 35px;
-            }
+            width: 80%;
+            display: flex;
+            flex-wrap: wrap;
         }
     }
-
-    &__socials {
-        .flex;
-        justify-content: center;
-        margin-top: 40px;
-
+    &__content {
+        flex-wrap: wrap;
+    }
+    &__menu {
+        
+        width: 100%;
+        text-transform: uppercase;
+        margin-bottom: 55px;
+        ul {
+            display: flex;
+            justify-content: space-between
+        }
+        li {
+            position: relative;
+            padding: 10px;
+            &:hover {
+                color: #14d193;
+                &:after {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: 8px;
+                    width: 100%;
+                    height: 2px;
+                    background-color: #14d193;
+                }
+            }
+        }
         a {
+            color: #fff;
+        }
+    }
+    &__adress {
+        width: 40%;
+        line-height: 1.5;
+
+    }
+    &__socials {
+        width: 60%;
+        .flex;
+        flex-direction: column;
+        justify-content: center;
+        p {
+            padding-bottom: 24px;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+        a {
+            display: inline-block;
             opacity: 0.8;
             color: @white;
             font-size: 24px;
             line-height: 21px;
-
+            background-color: #33383b;
+            border-radius: 50%;
+            padding: 15px;
             &:hover {
                 opacity: 1;
             }
@@ -677,6 +765,13 @@ h3 {
             }
         }
     }
+}
+.fa-circle--footer {
+    position: absolute;
+    left: 0;
+    background-color: #33383b;
+    border-radius: 50%;
+    padding: 15px;
 }
 
 .go-top-wrap {
@@ -766,6 +861,34 @@ h3 {
     }
 }
 
+//page not-found 404
+.not-found {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+    h1 {
+        font-size: 250px;
+        font-weight: 700;
+        color: #14d193;
+        letter-spacing: 5px;
+    }
+    &__text {
+        color: #303030;
+        font-size: 30px;
+        font-weight: 700;
+        letter-spacing: 0.6px;
+        margin-bottom: 15px;
+    }
+    &__solution {
+        color: #464646;
+        font-size: 20px;
+        font-weight: 400;
+        letter-spacing: 0.4px;
+        margin-bottom: 34px;
+    }
+}
+
 @media screen and (max-width:1919px) {
     .container {
         width: 80vw;
@@ -779,7 +902,7 @@ h3 {
         &__menu {
             ul {
                 li {
-                    min-width: calc(45vw / 3);
+                    // min-width: calc(45vw / 3);
                 }
             }
         }
