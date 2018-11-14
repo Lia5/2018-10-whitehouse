@@ -269,16 +269,6 @@ ul.peppermint-dots > li.peppermint-active-dot > span {
   font-family: 'Tahoma';
   src: url(../fonts/tahoma.ttf);
 }
-@font-face {
-  font-family: 'Proximanova';
-  src: url(../fonts/proximanova-regular.ttf);
-  font-weight: 400;
-}
-@font-face {
-  font-family: 'Proximanova';
-  src: url(../fonts/proximanova-bold.ttf);
-  font-weight: 700;
-}
 /* settings */
 /* row */
 .row {
@@ -420,7 +410,7 @@ ul.peppermint-dots > li.peppermint-active-dot > span {
 }
 body,
 a {
-  font-family: 'Proximanova', 'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: #2d2d2d;
   font-weight: 400;
 }
@@ -987,6 +977,9 @@ h3 {
 .footer .adress {
   margin-bottom: 17px;
 }
+.footer .adress .fa-circle--footer {
+  padding: 18px;
+}
 .footer .phone {
   font-size: 18px;
   line-height: 52px;
@@ -1323,10 +1316,15 @@ h3 {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    max-width: 190px;
+    margin: 0 auto;
   }
   .header__menu ul li a {
     padding: 0 10px;
     line-height: 26px;
+  }
+  .header__menu ul li a:hover:after {
+    bottom: 0;
   }
   .advantages__one {
     width: 40%;
@@ -1606,6 +1604,8 @@ h3 {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    max-width: 200px;
+    margin: 0 auto;
   }
   .footer__adress {
     width: 55%;

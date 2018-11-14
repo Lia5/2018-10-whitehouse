@@ -7,16 +7,16 @@
     font-family: 'Tahoma';
     src: url(../fonts/tahoma.ttf);
 }
-@font-face {
-    font-family: 'Proximanova';
-    src: url(../fonts/proximanova-regular.ttf);
-    font-weight: 400;
-}
-@font-face {
-    font-family: 'Proximanova';
-    src: url(../fonts/proximanova-bold.ttf);
-    font-weight: 700;
-}
+// @font-face {
+//     font-family: 'Proximanova';
+//     src: url(../fonts/proximanova-regular.ttf);
+//     font-weight: 400;
+// }
+// @font-face {
+//     font-family: 'Proximanova';
+//     src: url(../fonts/proximanova-bold.ttf);
+//     font-weight: 700;
+// }
 
 @blue-sky: #76d3fc;
 @green: #77d095;
@@ -61,7 +61,7 @@
 
 body,
 a {
-    font-family: 'Proximanova', 'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     color: @black;
     font-weight: 400;
 }
@@ -164,7 +164,6 @@ body {
     border-radius: 50%;
     padding: 10px;
     margin-right: 10px;
-
 }
 .flip {
     &--horizontal {
@@ -684,6 +683,9 @@ h3 {
     }
     .adress {
         margin-bottom: 17px;
+        .fa-circle--footer {
+            padding: 18px;
+        }
     }
     .phone {
         font-size: 18px;
@@ -787,6 +789,7 @@ h3 {
     border-radius: 50%;
     padding: 15px;
 }
+
 
 .go-top-wrap {
     display: none;
@@ -1047,11 +1050,16 @@ h3 {
             ul {
                 .flex;
                 flex-direction: column;
-
+                max-width: 190px;
+                margin: 0 auto;
                 li {
                     a {
                         padding: 0 10px;
                         line-height: 26px;
+                        &:hover:after {
+                            bottom: 0;
+                            
+                        }
                     }
                 }
             }
@@ -1392,6 +1400,8 @@ h3 {
         width: 45%;
             ul {
                 flex-direction: column;
+                max-width: 200px;
+                margin: 0 auto;
             }
         }
         &__adress {
